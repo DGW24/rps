@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rajapur F.P. School — Nurturing Learners, Inspiring Leaders</title>
+  <meta name="description" content="Official website — Rajapur F.P. School (Rajapur Primary School), Rajapur, Tapan, Dakshin Dinajpur, PIN 733127. Focus on activity-based learning and inclusive education." />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    :root{
+      /* Colorful palette */
+      --bg-1: #fff8fb;
+      --bg-2: #f6fffc;
+      --sun: #FFD166;     /* warm yellow */
+      --sky: linear-gradient(135deg,#56CCF2,#2F80ED); /* blue sky */
+      --mint: #7EE6B9;
+      --lav: #C084FC;
+      --coral: #FF7A85;
+      --primary-text: #0b2b3a;
+      --muted: #556270;
+      --card: #ffffff;
+      --radius-lg: 18px;
+      --glass: rgba(255,255,255,0.64);
+      --shadow-1: 0 10px 30px rgba(15,30,60,0.09);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1000px 400px at -10% -10%, rgba(200,100,255,0.06), transparent 12%),
+        radial-gradient(800px 300px at 120% 20%, rgba(80,200,150,0.04), transparent 14%),
+        var(--bg-1);
+      color:var(--primary-text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{max-width:1160px;margin:0 auto;padding:24px}
+
+    /* Header */
+    header{
+      margin-bottom:22px;
+      border-radius:22px;
+      overflow:hidden;
+      background: linear-gradient(120deg, #5ad3fe 0%, #9a70fc 35%, #92fbe9 100%);
+      color:white;
+      box-shadow: var(--shadow-1);
+    }
+
+    .nav-container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 24px 8px;
+      gap:16px;
+    }
+
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:68px;height:68px;border-radius:16px;
+      background: conic-gradient(from 200deg at 50% 50%, #FFD166, #ff307f, #861af2, #09d6e1);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12), inset 0 -6px 18px rgba(255,255,255,0.08);
+    }
+    .brand h1{font-family:"Baloo 2", "Nunito", sans-serif;margin:0;font-size:36px;letter-spacing:0.2px}
+    .brand p{margin:0;font-size:16px;opacity:0.95}
+
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{
+      color:rgba(255,255,255,0.98);
+      text-decoration:none;padding:8px 12px;border-radius:12px;font-weight:700;font-size:16px;
+      background:linear-gradient(180deg, rgb(183, 196, 0), rgb(0, 179, 27));transition:transform .18s, box-shadow .18s;box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      backdrop-filter: blur(4px);
+    }
+    nav a:hover{transform:translateY(-4px); box-shadow:0 18px 36px rgba(0,0,0,0.12);background: #ffffff;color: #14aa00;}
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:26px;padding:22px 24px 36px;align-items:center;
+    }
+    .hero-title{font-family:"Baloo 2",sans-serif;font-size:36px;margin:0;color:#cdfdf6;text-shadow:0 3px 0 rgba(0, 5, 163, 0.626)}
+    .hero p1{margin-top:12px;color:rgb(255, 255, 255);font-size:17px}
+
+    .cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;gap:10px;align-items:center;padding:12px 18px;border-radius:14px;font-weight:800;border:none;cursor:pointer;
+      background:linear-gradient(90deg,#ff6190,#ffeb4f);color:#002aff;box-shadow:0 8px 28px rgba(255,120,130,0.18);
+      transition:transform .15s, box-shadow .15s; text-shadow:0 0 5px #ffffff;
+    }
+    .btn.secondary{
+      background:linear-gradient(90deg,#7EE6B9,#56CCF2);color:#1f00cb;
+    }
+    .btn:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0, 0, 0, 0.532)}
+
+    /* Quick info card */
+    .quick-info{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      border-radius:16px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow-1);border:1px solid rgba(255,255,255,0.6); color: #0733fa;}
+    .quick-info strong{display:flex;gap:10px;align-items:center;font-size:16px}
+    .muted{color:var(--muted)}
+
+    .office-hours{
+      border-radius:14px;padding:14px;margin-top:10px;background:linear-gradient(90deg,#9900ff,#1472ff);
+      font-weight:700;text-align:center;
+    }
+
+    /* Sections & cards */
+    .section{margin:28px 0;padding:18px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(103, 196, 242, 0.88));box-shadow:var(--shadow-1);border:1px solid rgba(240,240,255,0.6)}
+    h2{margin:0;font-size:24px;display:flex;align-items:center;gap:10px;color: #002aff;}
+    .grid{display:grid;gap:18px;margin-top:18px}
+    .two{grid-template-columns:repeat(2,1fr)}
+    .three{grid-template-columns:repeat(3,1fr)}
+    .card{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#9cfedf);box-shadow:0 8px 20px rgba(15,30,60,0.05);border:1px solid rgba(10,30,60,0.02)}
+
+    .feat-card{display:flex;gap:14px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(90deg,#fcfde8,#ffd7e5);border:1px solid rgba(120,180,160,0.06)}
+    .feat-card i{font-size:26px;color:#002fff;padding:10px;border-radius:10px;background:linear-gradient(180deg,#fff,rgba(255, 31, 31, 0.459));box-shadow:0 6px 14px rgba(0,0,0,0.06)}
+
+    ul.custom-list{list-style:none;padding:0;margin:0}
+    ul.custom-list li{padding:8px 0;display:flex;gap:10px;align-items:flex-start}
+    ul.custom-list li:before{content:"";width:10px;height:10px;border-radius:3px;margin-top:8px;flex:0 0 12px;background:linear-gradient(180deg,#FFC166,#FF7A85)}
+
+    /* Notice */
+    .notice{padding:14px;border-radius:12px;background:linear-gradient(90deg,#FFF7E6,#FFF0F4);border-left:6px solid #FFB74D}
+    .notice strong{display:block;font-weight:800}
+
+    /* Staff Card NEW STYLE */
+    .staff-card{text-align:center;padding:18px;border-radius:16px;background:linear-gradient(180deg,#fcfcff,#ffffff);border:1px solid rgba(10,30,60,0.02)}
+    .staff-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .staff-card h4{margin-bottom:4px;color:var(--coral)}
+    .staff-card p{font-size:14px;margin:0}
+
+    /* Gallery */
+    .gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .gallery img{width:calc(33.333% - 8px);aspect-ratio:1/1;object-fit:cover;border-radius:12px;display:block;transition:transform .25s, box-shadow .25s}
+    .gallery img:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 18px 44px rgba(10,30,60,0.12)}
+
+    /* Contact & form */
+    input,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(10,30,60,0.06);margin-bottom:14px;background:rgba(255,255,255,0.9)}
+    label{font-size:14px;font-weight:700;color:var(--primary-text);display:block;margin-bottom:6px}
+    .btn-send{background:linear-gradient(90deg,#fff9a7,#9dfb75);}
+
+    iframe{border:0;border-radius:12px;display:block}
+
+    /* Table Style NEW STYLE */
+    .mdm-table{width:100%;border-collapse:collapse;margin-top:15px;text-align:left}
+    .mdm-table th, .mdm-table td{padding:10px;border-bottom:1px solid #f0f0f0}
+    .mdm-table th{background:var(--bg-2);font-weight:800;color:var(--primary-text);font-size:15px}
+    .mdm-table tr:nth-child(even){background:rgba(240,240,255,0.4)}
+
+
+    footer{
+      padding:22px;background:linear-gradient(90deg,#F7F9FF,#F2FFF8);color:var(--muted);border-radius:12px;margin-top:26px;text-align:center;
+    }
+
+    /* small tweaks */
+    .muted.small{font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding-bottom:20px}
+      .gallery img{width:calc(50% - 6px)}
+      .three{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .gallery img{width:100%}
+      nav{gap:8px}
+      .three{grid-template-columns:1fr}
+    }
+
+    /* small animated flourish for headings */
+    .sparkle{
+      display:inline-block;
+      width:10px;height:10px;margin-left:6px;border-radius:50%;
+      background:linear-gradient(90deg,#FF7A85,#FFC166);
+      box-shadow:0 6px 18px rgba(255,120,130,0.18);
+      animation: floaty 3s ease-in-out infinite;
+    }
+    @keyframes floaty{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-6px)}
+      100%{transform:translateY(0)}
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <div class="brand">
+          <div class="logo">RPS</div>
+          <div>
+            <h1>Rajapur F.P. School <span style="font-size:16px;display:block;font-weight:600;opacity:.9">Rajapur · Tapan · Dakshin Dinajpur</span></h1>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#about">About</a>
+          <a href="#academics">Academics</a>
+          <a href="#staff">Staff</a>
+          <a href="#admissions">Admissions</a>
+          <a href="#notices">Notices</a>
+          <a href="#gallery">Gallery</a>
+          
+        </nav>
+      </div>
+
+      <div class="hero">
+        <div>
+          <h2 class="hero-title">“Nurturing Today’s Learners, Inspiring Tomorrow’s Leaders.” <span class="sparkle" aria-hidden="true"></span></h2>
+          <p class="p1">Welcome to Rajapur F.P. School — a friendly, colourful, and safe place for young learners to build strong foundations. We emphasize activity-based learning, foundational skills, values, and inclusive education.</p>
+
+          <div class="cta-row">
+            <a class="btn" href="#admissions"><i class="fas fa-user-plus"></i> Enroll Your Child</a>
+            <a class="btn secondary" href="#contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="quick-info">
+            <strong><i class="fas fa-info-circle"></i> Quick Contact</strong>
+            <p class="muted" style="margin:8px 0"><i class="fas fa-map-marker-alt"></i> Address: Rajapur, Tapan, Dakshin Dinajpur, West Bengal — 733127</p>
+            <p class="muted" style="margin:8px 0"><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+918170933875">8170933875</a>, <a href="tel:+919064085452">9064085452</a></p>
+            <p class="muted" style="margin:8px 0"><i class="fas fa-envelope"></i> Email: <a href="mailto:info@rajapurfpschool.example">info@rajapurfpschool.example</a></p>
+          </div>
+
+          <div class="office-hours">
+            <strong><i class="fas fa-clock"></i> Office Hours</strong>
+            <div style="margin-top:6px;font-weight:700">Mon — Fri: 9:00 AM — 3:00 PM</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2><i class="fas fa-school" style="color:#0cb100"></i> About Rajapur F.P. School</h2>
+      <p class="muted" style="font-size: medium;">Rajapur F.P. School is a Government Aided Primary School serving children from Rajapur village and neighbouring communities. We are dedicated to providing a joyful and effective early education with an emphasis on literacy, numeracy, values, and life skills.</p>
+
+      <div style="margin-top:18px" class="grid two">
+        <div class="feat-card">
+          <i class="fas fa-history"></i>
+          <div>
+            <h4 style="margin:0">Our History</h4>
+            <p class="muted" style="margin-top:6px">Established to meet local educational needs, the school is a trusted institution that works closely with local families and community leaders to support every child's learning and well-being.</p>
+          </div>
+        </div>
+
+        <div class="feat-card">
+          <i class="fas fa-bullseye"></i>
+          <div>
+            <h4 style="margin:0">Mission & Vision</h4>
+            <p class="muted" style="margin-top:6px"><strong>Mission:</strong> Provide quality primary education developing confidence and foundational skills. <strong>Vision:</strong> Create a safe, nurturing environment where children grow into thoughtful, responsible individuals.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="grid two">
+        <div class="card">
+          <h3 style="color:#006af4">Infrastructure & Facilities</h3>
+          <ul class="custom-list muted">
+            <li>Classrooms equipped with LTM and teaching aids</li>
+            <li>Mid-Day Meal facility for nutritious food</li>
+            <li>Playground for sports and physical activities</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color:#8000ff">Inclusive Learning</h3>
+          <ul class="custom-list muted">
+            <li>Library corner with reading materials</li>
+            <li>Safe drinking water and sanitation facilities</li>
+            <li>Community engagement and parent participation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="academics" class="section">
+      <h2><i class="fas fa-book-open" style="color:#0fc174"></i> Our Academics</h2>
+      <p class="muted">We offer engaging, age-appropriate education from Pre-Primary to Class IV, with a strong focus on foundational skills and active learning methods.</p>
+
+      <div class="grid two" style="margin-top:14px">
+        <div class="card">
+          <h3 style="color:#0495c6">Teaching Approach</h3>
+          <ul class="custom-list muted">
+            <li>Activity & play-based learning and group work</li>
+            <li>Daily use of LTM (Learning-Teaching Materials)</li>
+            <li>Focus on storytelling, numeracy, and literacy</li>
+            <li>Regular formative assessments</li>
+          </ul>
+        </div>
+        <div class="card">
+            <h3 style="color:#dd4451">Co-curricular Activities</h3>
+            <ul class="custom-list muted">
+              <li>Drawing, Art & Craft workshops</li>
+              <li>Sports & Physical Education</li>
+              <li>Cultural Programs and Community events</li>
+              <li>Health and Hygiene Awareness</li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h2 style="color:#f15d01"><i class="fas fa-utensils"></i> Mid-Day Meal (MDM) Menu</h2>
+        <p class="muted small">We follow the prescribed government menu to ensure all students receive a nutritious and balanced daily meal.</p>
+        <table class="mdm-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Menu (Sample)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Rice, Dal, Vegetable Curry (Seasonal)</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Khichdi (with vegetables) & Egg Curry</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Rice, Dal, Soyabean Curry</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Luchi/Roti & Ghugni (Curried Chickpeas)</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Rice, Dal, Vegetable Fry, Extra item (e.g., fruit)</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="staff" class="section">
+        <h2><i class="fas fa-users" style="color:#a04cf4"></i> Our Dedicated Staff & Faculty</h2>
+        <p class="muted">Meet the Head of Institution and the dedicated teachers who make learning a joyful experience at Rajapur F.P. School.</p>
+
+        <div class="grid three" style="margin-top:14px">
+            <div class="card staff-card" style="background:#f2f0ff;">
+                <img src="s.jpg" alt="Head of Institution Photo Placeholder" />
+                <h4 style="color:#861af2">Shri Subrata Das</h4>
+                <p style="color:#5a1e8a"><strong>Head of Institution (HOI)</strong></p>
+                <p class="muted small" style="margin-top:8px">Dedicated to school administration, community liaison, and pedagogical oversight.</p>
+            </div>
+
+            <div class="card staff-card">
+                <img src="a.jpeg" alt="Teacher Photo Placeholder" />
+                <h4 style="color:#ff4c5b">Smt. Anjali Roy</h4>
+                <p style="color:#b33741">Assistant Teacher (Primary Classes)</p>
+                <p class="muted small" style="margin-top:8px">Specializes in foundational literacy and numeracy (FLN) skills.</p>
+            </div>
+
+            <div class="card staff-card">
+                <img src="r.jpg" alt="Teacher Photo Placeholder" />
+                <h4 style="color:#0b6b5a">Shri Rakesh Singha</h4>
+                <p style="color:#0f9c89">Assistant Teacher (Co-curricular)</p>
+                <p class="muted small" style="margin-top:8px">Leads sports, art & craft, and environmental education programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions" class="section">
+      <h2><i class="fas fa-clipboard-list" style="color:#26b7e8"></i> Admissions</h2>
+      <p class="muted">Admissions are currently open for all classes (Pre-Primary to Class IV). Please visit the school office during hours or use the contact form to enquire.</p>
+
+      <div class="grid two" style="margin-top:14px">
+        <div class="card">
+          <h3 style="color:#f75865">Admission Steps</h3>
+          <ol class="custom-list muted" style="padding-left:14px;">
+            <li>Collect the application form from the school office.</li>
+            <li>Fill in student and guardian details completely.</li>
+            <li>Attach necessary documents (see list).</li>
+            <li>Submit the completed form at the school office.</li>
+            <li>Admission confirmed after document verification.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3 style="color:#9a45ef">Required Documents</h3>
+          <ul class="custom-list muted">
+            <li>Original Birth Certificate</li>
+            <li>Student's Aadhaar Card (if available)</li>
+            <li>Guardian's Photo ID and Address Proof</li>
+            <li>Passport-size Photograph of the child</li>
+            <li>Transfer Certificate (for Class II-IV students)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="notices" class="section">
+      <h2><i class="fas fa-bullhorn" style="color:#FFD166"></i> Notices & Announcements</h2>
+
+      <div class="notice" style="margin-top:12px">
+        <strong><i class="fas fa-star" style="color:#FFB74D"></i> NEW: Admission Open for Academic Year 2026</strong>
+        <div class="muted" style="margin-top:6px">Parents are encouraged to visit the school office soon to collect and submit admission forms before seats fill up. <strong>Deadline: January 31, 2026</strong>.</div>
+      </div>
+
+      <div style="margin-top:14px" class="grid three">
+        <div class="card">
+          <strong>NMMS Scholarship Guidance</strong>
+          <p class="muted" style="margin-top:8px">Eligible students may contact the Head of Institution (HOI) for exam details and form filling support.</p>
+        </div>
+        <div class="card">
+          <strong>Annual Sports Day 2026</strong>
+          <p class="muted" style="margin-top:8px">Date: March 15, 2026 — a day of fun, games, and parent participation.</p>
+        </div>
+        <div class="card">
+          <strong>Library Donation Drive</strong>
+          <p class="muted" style="margin-top:8px">We welcome storybooks and educational materials to enrich our library corner.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2><i class="fas fa-camera" style="color:#FF7A85"></i> Photo Gallery</h2>
+      <p class="muted">Glimpses of life and learning at Rajapur F.P. School. (Replace placeholders with real photos.)</p>
+
+      <div class="gallery" aria-hidden="false">
+        <img src="sc1.jpg" alt="School building and entrance" />
+        <img src="sc2.jpg" alt="Students engaging in classroom activity" />
+        <img src="sc3.jpg" alt="Students during mid-day meal time" />
+        <img src="sc4.jpg" alt="Students in drawing class" />
+        <img src="sc5.jpg" alt="Students playing on the playground" />
+        <img src="sc6.jpg" alt="Students performing during a cultural event" />
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2><i class="fas fa-headset" style="color:#1eb2e4"></i> Contact Us</h2>
+      <div class="grid two" style="align-items:start;">
+        <div>
+          <p class="muted"><strong>Address:</strong><br><i class="fas fa-map-marker-alt" style="color:#fd1e31"></i> Rajapur F.P. School<br> Rajapur, Tapan, Dakshin Dinajpur <br>West Bengal — 733127</p>
+          <p class="muted"><strong>Phone:</strong><br><i class="fas fa-phone-alt" style="color:#0fb504"></i> 8170933875 / 9064085452</p>
+          <p class="muted"><strong>Email:</strong><br><i class="fas fa-envelope" style="color:#0167ff"></i> <a href="mailto:info@rajapurfpschool.example">info@rajapurfpschool.example</a></p>
+
+          <h4 style="margin-top:18px">Send us a Message</h4>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <label for="cname">Your Name</label>
+            <input id="cname" required type="text" />
+            <label for="cphone">Mobile Number</label>
+            <input id="cphone" required type="tel" />
+            <label for="cmsg">Your Enquiry / Message</label>
+            <textarea id="cmsg" rows="4" required></textarea>
+            <div style="margin-top:10px"><button class="btn btn-send" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button></div>
+            <p id="cmsgStatus" style="margin-top:12px;color:var(--muted);font-size:14px;font-weight:700"></p>
+          </form>
+        </div>
+
+        <div>
+          <div style="height:320px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-1)">
+            <iframe width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116244.2046553896!2d88.54929767568364!3d25.438515328168235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910905e9185a539%3A0x280e816a13d7890b!2sDakshin%20Dinajpur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700494483788!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div style="margin-top:14px" class="card">
+            <h3><i class="fas fa-user-tie" style="color:#3fe49d"></i> Principal's Note</h3>
+            <p class="muted" style="margin-top:8px">Welcome to Rajapur F.P. School. We are committed to providing every child with the best possible start to their education journey. We value cooperation with parents and the community to ensure holistic development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="margin-bottom:8px">© 2025 Rajapur F.P. School — All Rights Reserved.</div>
+      <div class="muted small">Rajapur, Tapan, Dakshin Dinajpur · PIN 733127. Designed for the students and community.</div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('cname').value.trim();
+      const statusElement = document.getElementById('cmsgStatus');
+
+      // Simulate form submission success
+      statusElement.style.color = '#0b8a5a';
+      statusElement.textContent = 'Thank you ' + (name || 'Friend') + '! Your message has been sent. We will contact you soon.';
+
+      // Reset form
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>
